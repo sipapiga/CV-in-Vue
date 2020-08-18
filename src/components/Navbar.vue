@@ -45,7 +45,7 @@ export default {
     return {
       sideNav: false,
       menuItems: [
-        { icon: "mdi-home", title: "Home" },
+        { icon: "mdi-home", title: "About Me" },
         { icon: "mdi-contact_page", title: "CV" },
         { icon: "mdi-build", title: "Skills" },
         { icon: "mdi-work", title: "Portfolio" },
