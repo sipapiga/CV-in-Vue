@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-card flat tile>
-      <v-toolbar dark class="teal darken-1">
+      <v-toolbar dark class="brown lighten-1">
         <!--      <v-navigation-drawer v-model="sideNav">
           <v-list>
             <v-list-item v-for="item in menuItems" :key="item.title">
@@ -26,7 +26,7 @@
         <v-spacer></v-spacer>
         <v-toolbar-items>
           <v-btn
-            class="teal darken-1"
+            class="brown lighten-1"
             v-for="item in menuItems"
             :key="item.title"
             :href="item.href"

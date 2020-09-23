@@ -31,7 +31,7 @@
               </p>
               <v-row justify="center" class="mt-10">
                 <v-btn color="blue-grey lighten-4" class="mr-2" href="#skills">Skills</v-btn>
-                <v-btn color="blue-grey lighten-4" class="ml-5">Contact</v-btn>
+                <v-btn color="blue-grey lighten-4" class="ml-5" href="#contact">Contact</v-btn>
               </v-row>
             </v-col>
             <v-col></v-col>

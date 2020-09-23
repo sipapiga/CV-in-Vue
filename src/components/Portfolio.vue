@@ -2,13 +2,13 @@
   <div id="portfolio">
     <v-layout row wrap>
       <v-flex xs12>
-        <v-container class="content red lighten-5" fill-height fluid>
+        <v-container class="red lighten-5" fill-height fluid>
           <v-row class="text-center">
             <v-col cols="12">
               <h1 class="display-3 blue-grey--text lighten-1 text-center  mt-5">
                 Portfolio
               </h1>
-              <v-divider :inset="inset"></v-divider>
+              <v-divider></v-divider>
             </v-col>
           </v-row>
           <v-row align="center" justify="center">
@@ -185,7 +185,7 @@
                           height="200px"
                         ></v-img>
                       </a>
-                      <v-card-title>Api</v-card-title>
+                      <v-card-title>Api for Presence Management</v-card-title>
 
                       <v-card-subtitle
                         >Intenship Project - Backend</v-card-subtitle
@@ -227,7 +227,7 @@
                           height="200px"
                         ></v-img>
                       </a>
-                      <v-card-title>Realestate Management</v-card-title>
+                      <v-card-title>Presence Management</v-card-title>
 
                       <v-card-subtitle
                         >Intenship Project - Vuejs</v-card-subtitle

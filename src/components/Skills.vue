@@ -7,7 +7,7 @@
             <v-row class="text-center">
               <v-col cols="12">
                 <p class="blue-grey--text lighten-1 text-center heading">Skills</p>
-                <v-divider :inset="inset"></v-divider>
+                <v-divider></v-divider>
               </v-col>
             </v-row>
             <v-row align="center" justify="center">
