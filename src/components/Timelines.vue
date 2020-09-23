@@ -12,7 +12,7 @@
         </v-container>
       </v-flex>
       <v-flex xs6>
-        <v-container class="content red lighten-5" fill-height fluid>
+        <v-container class="red lighten-5" fill-height fluid>
           <v-row align="center" justify="center">
             <v-col></v-col>
             <v-col cols="10">

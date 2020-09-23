@@ -1,9 +1,9 @@
 <template>
   <div id="contact" class="pb-5">
-    <div class="text-center content">
+    <div class="text-center">
       <v-layout row wrap>
         <v-flex xs6>
-          <v-container class="content red lighten-5" fill-height fluid>
+          <v-container class="red lighten-5" fill-height fluid>
             <v-row class="text-center">
               <v-col cols="12">
                 <p class="blue-grey--text lighten-1 text-center heading">
@@ -36,6 +36,38 @@
 
                   <v-textarea label="Message" v-model="message"></v-textarea>
                   <v-btn class="mr-4" @click="submit">submit</v-btn>
+                  <v-row class="mt-5">
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="indigo"
+                      href="https://www.linkedin.com/in/sipapat-prasopsap-054442b3/"
+                      target="_blank"
+                    >
+                      <v-icon light>mdi-linkedin</v-icon>
+                    </v-btn>
+                      <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="light-blue darken-3"
+                      href="https://www.facebook.com/sipapiga?ref=bookmarks"
+                      target="_blank"
+                    >
+                      <v-icon light>mdi-facebook</v-icon>
+                    </v-btn>
+                      <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="grey darken-4"
+                      href="https://github.com/sipapiga"
+                      target="_blank"
+                    >
+                      <v-icon light>mdi-github</v-icon>
+                    </v-btn>
+                  </v-row>
                 </v-container>
               </v-form>
             </v-row>
@@ -44,7 +76,7 @@
         <v-flex xs6>
           <v-container
             class="content red lighten-4 text-center"
-            style="height: 100vh;"
+            style="height: 100%;"
           >
             <v-img
               :src="require('@/assets/images/bild2.jpg')"
@@ -60,10 +92,12 @@
 </template>
 
 <script>
+//import { mdiLinkedin } from "@mdi/js";
 export default {
   name: "Contact",
   data() {
     return {
+    //  mdiLinkedin,
       valid: false,
       firstname: "",
       nameRules: [
@@ -80,10 +114,10 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.firstname)
-      console.log(this.email)
-      console.log(this.message)
-      this.clear()
+      console.log(this.firstname);
+      console.log(this.email);
+      console.log(this.message);
+      this.clear();
     },
     clear() {
       this.name = "";
@@ -94,15 +128,4 @@ export default {
 };
 </script>
 
-<style scoped>
-img {
-  width: 70%;
-}
-.map {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-</style>
+<style scoped></style>
