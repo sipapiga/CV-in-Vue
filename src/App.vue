@@ -13,7 +13,10 @@
           </v-list>
         </v-navigation-drawer>-->
         <div class="d-flex align-center">
-          <v-app-bar-nav-icon @click.native="sideNav = !sideNav" class="hidden-sm-and-up"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon
+            @click.native="sideNav = !sideNav"
+            class="hidden-sm-and-up"
+          ></v-app-bar-nav-icon>
           <v-avatar>
             <v-img :src="require('@/assets/images/profileBildEdit.png')" />
           </v-avatar>
@@ -22,7 +25,12 @@
 
         <v-spacer></v-spacer>
         <v-toolbar-items>
-          <v-btn class="teal darken-1" v-for="item in menuItems" :key="item.title">
+          <v-btn
+            class="teal darken-1"
+            v-for="item in menuItems"
+            :key="item.title"
+            :href="item.href"
+          >
             <v-icon icon left>{{ item.icon }}</v-icon>
             {{ item.title }}
           </v-btn>
@@ -41,13 +49,16 @@ export default {
     return {
       sideNav: false,
       menuItems: [
-        { icon: "account_circle ", title: "About Me" },
-        { icon: "contact_page", title: "CV" },
-        { icon: "build", title: "Skills" },
-        { icon: "work", title: "Portfolio" },
-        { icon: "timeline", title: "Timelines" }
+        { icon: "account_circle ", title: "About Me", href: "#aboutme" },
+        { icon: "build", title: "Skills", href: "#skills" },
+        { icon: "work", title: "Portfolio", href: "#portfolio" },
+        { icon: "timeline", title: "Timelines", href: "#timelines" }
       ]
     };
   }
 };
 </script>
+
+<style lang="scss">
+@import "./assets/custom-vars.scss";
+</style>

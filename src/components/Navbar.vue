@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark class="teal darken-1">
+  <v-toolbar dark class="teal darken-1" inverted-scroll>
     <v-navigation-drawer v-model="sideNav">
       <v-list>
         <v-list-tile v-for="item in menuItems" :key="item.title">
@@ -46,7 +46,6 @@ export default {
       sideNav: false,
       menuItems: [
         { icon: "mdi-home", title: "About Me" },
-        { icon: "mdi-contact_page", title: "CV" },
         { icon: "mdi-build", title: "Skills" },
         { icon: "mdi-work", title: "Portfolio" },
         { icon: "mdi-timeline", title: "Timelines" }

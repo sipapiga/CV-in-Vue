@@ -1,0 +1,17 @@
+// File: custom.scss
+
+
+@import '~vuetify/src/styles/styles.sass';
+            
+.heading {
+  font-family: unquote("Roboto");
+  font-size: 4rem;
+  margin-left:50px;
+  align-items: center;
+}
+.content {
+  height: 100vh;
+}
+.v-image__image {
+  background-size: 100% 100%;
+}
