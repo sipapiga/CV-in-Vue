@@ -1,7 +1,7 @@
 <template>
   <div id="timelines" class="brown lighten-5">
     <v-layout row wrap>
-      <v-flex xs6>
+      <v-flex  d-flex xs12 sm12 md6 lg6>
         <v-container class="red lighten-4 text-center" style="height: 100%;">
           <v-img
             :src="require('@/assets/images/IMG_0596.jpg')"
@@ -11,12 +11,12 @@
           ></v-img>
         </v-container>
       </v-flex>
-      <v-flex xs6>
+      <v-flex  d-flex xs12 sm12 md6 lg6>
         <v-container class="red lighten-5" fill-height fluid>
           <v-row align="center" justify="center">
             <v-col></v-col>
             <v-col cols="10">
-              <h1 class="display-2 blue-grey--text lighten-1 text-center mt-5">Timelines</h1>
+              <h1 class="heading blue-grey--text lighten-1 text-center mt-5">Timelines</h1>
               <v-divider></v-divider>
               <v-timeline>
                 <v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
@@ -32,7 +32,8 @@
                         `headline font-weight-light mb-4 ${year.color}--text`
                       "
                     >{{ year.header }}</h2>
-                    <div>{{ year.text }}</div>
+                    <div>
+                    <p>{{ year.text }}</p></div>
                   </div>
                 </v-timeline-item>
               </v-timeline>

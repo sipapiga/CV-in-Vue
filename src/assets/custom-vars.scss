@@ -15,3 +15,11 @@
 .v-image__image {
   background-size: 100% 100%;
 }
+@media (max-width: 600px) {
+ .heading {
+  font-family: unquote("Roboto");
+  font-size: 2rem;
+  margin-left:50px;
+  align-items: center;
+}
+ }

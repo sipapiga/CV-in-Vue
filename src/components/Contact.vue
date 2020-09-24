@@ -2,11 +2,11 @@
   <div id="contact" class="pb-5">
     <div class="text-center">
       <v-layout row wrap>
-        <v-flex xs6>
+        <v-flex  d-flex xs12 sm12 md6 lg6>
           <v-container class="red lighten-5" fill-height fluid>
             <v-row class="text-center">
               <v-col cols="12">
-                <p class="blue-grey--text lighten-1 text-center heading">
+                <p class="blue-grey--text lighten-1 text-center heading ">
                   Contact Me
                 </p>
                 <v-divider></v-divider>
@@ -35,7 +35,7 @@
                   ></v-text-field>
 
                   <v-textarea label="Message" v-model="message"></v-textarea>
-                  <v-btn class="mr-4" @click="submit">submit</v-btn>
+                  <v-btn class="mr-4" @click="submit">Send</v-btn>
                   <v-row class="mt-5">
                     <v-btn
                       class="mx-2"
@@ -67,13 +67,26 @@
                     >
                       <v-icon light>mdi-github</v-icon>
                     </v-btn>
+                      <v-snackbar v-model="snackbar">
+                        {{ text }}
+                        <template v-slot:action="{ attrs }">
+                          <v-btn
+                            color="pink"
+                            text
+                            v-bind="attrs"
+                            @click="snackbar = false"
+                          >
+                          Close
+                          </v-btn>
+                        </template>
+                      </v-snackbar>
                   </v-row>
                 </v-container>
               </v-form>
             </v-row>
           </v-container>
         </v-flex>
-        <v-flex xs6>
+        <v-flex  d-flex xs12 sm12 md6 lg6>
           <v-container
             class="content red lighten-4 text-center"
             style="height: 100%;"
@@ -92,12 +105,13 @@
 </template>
 
 <script>
-//import { mdiLinkedin } from "@mdi/js";
+import db from "@/firebase/init";
 export default {
   name: "Contact",
   data() {
     return {
-    //  mdiLinkedin,
+      snackbar:false,
+      text:'Thank you for your message! :)',
       valid: false,
       firstname: "",
       nameRules: [
@@ -117,6 +131,13 @@ export default {
       console.log(this.firstname);
       console.log(this.email);
       console.log(this.message);
+      db.collection('contact').add({
+        firstname: this.firstname,
+        email: this.email,
+        message: this.message
+      }).then(()=>{
+        this.snackbar = true
+      })
       this.clear();
     },
     clear() {

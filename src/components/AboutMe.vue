@@ -1,7 +1,7 @@
 <template>
   <div id="aboutme" class="content brown lighten-5">
-    <v-layout row wrap>
-      <v-flex xs6>
+    <v-layout row justify-space-between>
+      <v-flex d-flex xs12 sm12 md6 lg6>
         <v-container
           class="content red lighten-4 text-center"
           style="height: 100vh;"
@@ -14,7 +14,7 @@
           ></v-img>
         </v-container>
       </v-flex>
-      <v-flex xs6>
+      <v-flex d-flex xs12 sm12 md6 lg6>
         <v-container class="content red lighten-5" fill-height fluid>
           <v-row align="center" justify="center">
             <v-col></v-col>

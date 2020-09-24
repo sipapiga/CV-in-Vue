@@ -1,11 +1,11 @@
 <template>
   <div id="portfolio">
     <v-layout row wrap>
-      <v-flex xs12>
+      <v-flex  d-flex xs12 sm12 md12 lg12>
         <v-container class="red lighten-5" fill-height fluid>
           <v-row class="text-center">
             <v-col cols="12">
-              <h1 class="display-3 blue-grey--text lighten-1 text-center  mt-5">
+              <h1 class="heading blue-grey--text lighten-1 text-center  mt-5">
                 Portfolio
               </h1>
               <v-divider></v-divider>
@@ -15,7 +15,7 @@
             <v-card class="m-3">
               <v-container class="brown lighten-4">
                 <v-row>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="https://sipapiga.github.io/CRM/" target="_blank">
                         <v-img
@@ -55,7 +55,7 @@
                       </v-expand-transition>
                     </v-card>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="https://ratingsipr1901.herokuapp.com/" target="_blank">
                         <v-img
@@ -96,7 +96,7 @@
                       </v-expand-transition>
                     </v-card>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="http://sipapiga.com/movieratingwebb19/" target="_blank">
                         <v-img
@@ -134,7 +134,7 @@
                       </v-expand-transition>
                     </v-card>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="https://sipapiga.com/realestatewebb19/" target="_blank">
                         <v-img
@@ -175,7 +175,7 @@
                       </v-expand-transition>
                     </v-card>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="https://api.pm.emmio.se/" target="_blank">
                         <v-img
@@ -217,7 +217,7 @@
                       </v-expand-transition>
                     </v-card>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="12" md="4" sm="12" lg="4">
                     <v-card class="mx-auto" max-width="344">
                       <a href="https://pm.emmio.se/" target="_blank">
                         <v-img
