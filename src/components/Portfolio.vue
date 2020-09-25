@@ -15,244 +15,41 @@
             <v-card class="m-3">
               <v-container class="brown lighten-4">
                 <v-row>
-                  <v-col cols="12" md="4" sm="12" lg="4">
+                  <v-col cols="12" md="4" sm="12" lg="4"  v-for="card in cards" :key="card.title">
                     <v-card class="mx-auto" max-width="344">
-                      <a href="https://sipapiga.github.io/CRM/" target="_blank">
+                      <a :href="`${card.href}`" target="_blank">
                         <v-img
-                          :src="require('@/assets/images/crm.jpg')"
+                          :src="require(`@/assets/images/${card.src}`)"
                           gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
                           :cover="true"
                           height="200px"
                         ></v-img>
                       </a>
-                      <v-card-title>CRM</v-card-title>
+                      <v-card-title>{{card.title}}</v-card-title>
 
                       <v-card-subtitle
-                        >School Project - Javascript 2</v-card-subtitle
+                        >{{card.subtitle}}</v-card-subtitle
                       >
 
                       <v-card-actions>
                         <v-spacer></v-spacer>
 
-                        <v-btn icon @click="show = !show">
+                        <v-btn icon @click="card.show = !card.show">
                           <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
+                            card.show ? "mdi-chevron-up" : "mdi-chevron-down"
                           }}</v-icon>
                         </v-btn>
                       </v-card-actions>
 
                       <v-expand-transition>
-                        <div v-show="show">
+                        <div v-show="card.show">
                           <v-divider></v-divider>
 
                           <v-card-text>
                             <p class="font-weight-bold">Technique:</p>
+                            <p>{{card.technique}}</p>
                             <p>
-                              Javascript, HTML:5, CSS, SASS, jQuery, Bootstrap
-                            </p>
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="4" sm="12" lg="4">
-                    <v-card class="mx-auto" max-width="344">
-                      <a href="https://ratingsipr1901.herokuapp.com/" target="_blank">
-                        <v-img
-                          :src="require('@/assets/images/rating.jpg')"
-                          gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
-                          :cover="true"
-                          height="200px"
-                        ></v-img>
-                      </a>
-                      <v-card-title>Restaurant recension</v-card-title>
-
-                      <v-card-subtitle
-                        >School Project - Backend</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="show = !show">
-                          <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
-                          }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            <p class="font-weight-bold">Technique:</p>
-                            <p>
-                              NodeJs, Express, MySQL, Heroku, HTML5, Bootstrap,
-                              AJAX
-                            </p>
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="4" sm="12" lg="4">
-                    <v-card class="mx-auto" max-width="344">
-                      <a href="http://sipapiga.com/movieratingwebb19/" target="_blank">
-                        <v-img
-                          :src="require('@/assets/images/moviewordpress.jpg')"
-                          gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
-                          :cover="true"
-                          height="200px"
-                        ></v-img>
-                      </a>
-                      <v-card-title>Movie recension</v-card-title>
-
-                      <v-card-subtitle
-                        >School Project - CMS with Wordpress</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="show = !show">
-                          <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
-                          }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            <p class="font-weight-bold">Technique:</p>
-                            <p>Wordpress, MySQL, PHP, AJAX</p>
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="4" sm="12" lg="4">
-                    <v-card class="mx-auto" max-width="344">
-                      <a href="https://sipapiga.com/realestatewebb19/" target="_blank">
-                        <v-img
-                          :src="
-                            require('@/assets/images/realestatewordpress.jpg')
-                          "
-                          gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
-                          :cover="true"
-                          height="200px"
-                        ></v-img>
-                      </a>
-                      <v-card-title>Realestate Management</v-card-title>
-
-                      <v-card-subtitle
-                        >School Project - CMS with Wordpress</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="show = !show">
-                          <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
-                          }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            <p class="font-weight-bold">Technique:</p>
-                            <p>Wordpress, MySQL, PHP, AJAX</p>
-                            <p>A realestate website builded with Wordpress</p>
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="4" sm="12" lg="4">
-                    <v-card class="mx-auto" max-width="344">
-                      <a href="https://api.pm.emmio.se/" target="_blank">
-                        <v-img
-                          :src="require('@/assets/images/api-emmio.jpg')"
-                          gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
-                          :cover="true"
-                          height="200px"
-                        ></v-img>
-                      </a>
-                      <v-card-title>Api for Presence Management</v-card-title>
-
-                      <v-card-subtitle
-                        >Intenship Project - Backend</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="show = !show">
-                          <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
-                          }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            <p class="font-weight-bold">Technique:</p>
-                            <p>NodeJs, MongoDB, Express</p>
-                            <p>
-                              An api builded with NodeJs during intenship time
-                              in spring 2020
-                            </p>
-                          </v-card-text>
-                        </div>
-                      </v-expand-transition>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="4" sm="12" lg="4">
-                    <v-card class="mx-auto" max-width="344">
-                      <a href="https://pm.emmio.se/" target="_blank">
-                        <v-img
-                          :src="require('@/assets/images/admin-pm.jpg')"
-                          gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
-                          :cover="true"
-                          height="200px"
-                        ></v-img>
-                      </a>
-                      <v-card-title>Presence Management</v-card-title>
-
-                      <v-card-subtitle
-                        >Intenship Project - Vuejs</v-card-subtitle
-                      >
-
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="show = !show">
-                          <v-icon>{{
-                            show ? "mdi-chevron-up" : "mdi-chevron-down"
-                          }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-
-                      <v-expand-transition>
-                        <div v-show="show">
-                          <v-divider></v-divider>
-
-                          <v-card-text>
-                            <p class="font-weight-bold">Technique:</p>
-                            <p>Javascript, Vuesjs, MongoDB, Axios</p>
-                            <p>
-                              An intenship project builded with vuejs to manage
-                              user check-in and check-out inside the building
+                              {{card.text}}
                             </p>
                           </v-card-text>
                         </div>
@@ -274,7 +71,16 @@ export default {
   name: "Portfolio",
   data() {
     return {
-      show: false
+      show: false,
+       cards: [
+      { title: 'CRM', subtitle: 'School Project - Javascript', show: false,technique:'Javascript, HTML:5, CSS, SASS, jQuery, Bootstrap:',text:'', src: 'crm.jpg', href: 'https://sipapiga.github.io/CRM/' },
+      {title: 'Restaurant recension', subtitle: 'School Project - Backend', show: false,technique:'NodeJs, Express, MySQL, Heroku, HTML5, Bootstrap, AJAX:',text:'', src: 'api-emmio.jpg', href: 'https://ratingsipr1901.herokuapp.com/'  },
+      { title: 'Movie recension', subtitle: 'School Project - CMS with Wordpress', show: false,technique:'Wordpress, MySQL, PHP, AJAX:',text:'', src: 'moviewordpress.jpg', href: 'http://sipapiga.com/movieratingwebb19/' },
+      {title: 'Realestate Management', subtitle: 'School Project - CMS with Wordpress', show: false,technique:'Wordpress, MySQL, PHP, AJAX',text:'A realestate website builded with Wordpress', src: 'realestatewordpress.jpg', href: 'https://sipapiga.com/realestatewebb19/'  },
+      {title: 'Api for Presence Management', subtitle: 'Intenship Project - NodeJs', show: false,technique:'NodeJs, MongoDB, Express',text:'An api builded with NodeJs during intenship time in spring 2020', src: 'api-emmio.jpg', href: 'https://api.pm.emmio.se/'  },
+      { title: 'Presence Management', subtitle: 'Intenship Project - Vuejs', show: false,technique:'Javascript, Vuesjs, MongoDB, Axios',text:'An intenship project builded with vuejs to manage user check-in and check-out inside the building', src: 'admin-pm.jpg', href: 'https://pm.emmio.se/' }
+ 
+    ]
     };
   }
 };

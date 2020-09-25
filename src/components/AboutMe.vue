@@ -1,12 +1,12 @@
 <template>
   <div id="aboutme" class="content brown lighten-5">
-    <v-layout row justify-space-between>
+    <v-layout row justify-space-between class="content">
       <v-flex d-flex xs12 sm12 md6 lg6>
         <v-container
           class="content red lighten-4 text-center"
-          style="height: 100vh;"
+          style="height: 100%;"
         >
-          <v-img
+          <v-img  :aspect-ratio="16/9"
             :src="require('@/assets/images/bild_me.jpg')"
             gradient="to top right,  rgba(75, 14, 62, 0.09), rgba(137, 84, 67, 0.18)"
             :cover="true"
@@ -19,7 +19,7 @@
           <v-row align="center" justify="center">
             <v-col></v-col>
             <v-col cols="8">
-              <h1 class="display-3 ml-10 mb-10">About ME</h1>
+              <h1 class="heading ml-10 mb-10">About ME</h1>
               <p class="subheading ml-10">
                 I was born in Thailand but I have lived in Sweden for 13 years.
                 I have previously worked in a restaurant, but after 10 years in

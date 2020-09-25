@@ -26,7 +26,7 @@
         <v-navigation-drawer v-model="sideNav" absolute temporary >
           <v-list nav dense>
           <v-list-item-group v-model="group" v-for="item in menuItems" :key="item.title">
-              <v-list-item :to="item.href">
+              <v-list-item :href="item.href">
                 <v-icon>{{ item.icon }}</v-icon>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
               </v-list-item>
