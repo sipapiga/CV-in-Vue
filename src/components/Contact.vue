@@ -106,6 +106,7 @@
 
 <script>
 import db from "@/firebase/init";
+import firebase from "firebase";
 export default {
   name: "Contact",
   data() {
@@ -128,20 +129,19 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.firstname);
-      console.log(this.email);
-      console.log(this.message);
+      var myTimestamp = firebase.firestore.Timestamp.fromDate(new Date());
       db.collection('contact').add({
         firstname: this.firstname,
         email: this.email,
-        message: this.message
+        message: this.message,
+        timestamp: myTimestamp
       }).then(()=>{
         this.snackbar = true
       })
       this.clear();
     },
     clear() {
-      this.name = "";
+      this.firstname = "";
       this.email = "";
       this.message = "";
     }
